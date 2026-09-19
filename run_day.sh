@@ -4,7 +4,7 @@ DAY=$1
 PART=$(echo $DAY | tr -d '-')
 
 #1. generate
-python gen.py $DAY
+python3 gen.py $DAY
 
 #2. upload
 gcloud storage cp transactions_$DAY.csv gs://payflow_ubaid_09/raw/
