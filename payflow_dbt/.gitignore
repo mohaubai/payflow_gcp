@@ -1,5 +1,4 @@
-*.csv
-next.md
+
 target/
 dbt_packages/
 logs/

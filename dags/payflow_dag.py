@@ -49,7 +49,7 @@ with DAG(
     #update mart table
     update_mart = BashOperator(
         task_id='update_mart',
-        bash_command="cd /home/mubaid675/gcp_project && bq query --use_legacy_sql=false < mart_daily_revenue.sql"
+        bash_command="cd /home/mubaid675/gcp_project/payflow_dbt && dbt run && dbt test"
     )
 
     #dependency

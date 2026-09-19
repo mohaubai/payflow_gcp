@@ -1,0 +1,13 @@
+verrsion: 2
+
+models:
+  - name: daily_revenue
+    columns:
+      - name: txn_date
+        tests:
+            - not_null
+      - name: currency
+        tests:
+            - accepted_values:
+                arguments:
+                  values: ['USD']
